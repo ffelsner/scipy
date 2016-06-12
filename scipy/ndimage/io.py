@@ -4,11 +4,13 @@ from __future__ import division, print_function, absolute_import
 _have_pil = True
 try:
     from scipy.misc.pilutil import imread as _imread
+    from scipy.misc.pilutil import imsave
+    from scipy.misc.pilutil import imshow
 except ImportError:
     _have_pil = False
 
 
-__all__ = ['imread']
+__all__ = ['imread', 'imsave', 'imshow']
 
 
 # Use the implementation of `imread` in `scipy.misc.pilutil.imread`.
